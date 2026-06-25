@@ -1,0 +1,80 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  background: #121212;
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+  background-image: 
+    radial-gradient(circle at 1px 1px, #222 1px, transparent 1px),
+    radial-gradient(circle at 6px 6px, #222 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00b8d4aa;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #00b8d4;
+}
+
+#searchBar {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.leaderboards {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.leaderboards section {
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #00b8d4;
+  padding-bottom: 0.25rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #222;
+}
+
+li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+}
+
+li.highlight {
+  background-color: #004d60;
+  color: #00e5ff;
+  font-weight: bold;
+}
