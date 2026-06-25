@@ -1,27 +1,81 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Minecraft SMP Money Leaderboard</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MoneyMC — SMP Leaderboards</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Minecraft SMP Money SMP Leaderboards</h1>
-    <input type="search" id="searchBar" placeholder="Search players..." />
-    <div class="leaderboards">
-      <section>
-        <h2>Players</h2>
-        <ul id="playersList"></ul>
-      </section>
-      <section>
-        <h2>Teams</h2>
-        <ul id="teamsList"></ul>
-      </section>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-logo">Money<span>MC</span></div>
+    <div class="nav-links">
+      <a href="#players">Players</a>
+      <a href="#teams">Teams</a>
     </div>
   </div>
-  <script src="app.js"></script>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">⛏ Season 2 — Money SMP</div>
+    <h1><span class="accent">Money</span>SMP</h1>
+    <p class="hero-sub">Daker is a cutie</p>
+    <div class="coin-counter">
+      <span class="coin-icon">🪙</span>
+      <div>
+        <span class="label">TOTAL SERVER WEALTH</span>
+        <span id="total-wealth">$0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="search-section">
+  <div class="wrap">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search a player's name…" autocomplete="off" />
+      <span class="search-icon">🔍</span>
+    </div>
+    <div id="search-result"></div>
+  </div>
+</section>
+
+<section id="players" class="players-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>Player Leaderboard</h2>
+      <br>
+      <div class="section-rule"></div>
+    </div>
+    <div class="boards-grid">
+      <div class="lb-card" id="player-board-a"></div>
+      <div class="lb-card" id="player-board-b"></div>
+    </div>
+  </div>
+</section>
+
+<section id="teams" class="team-section">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>Team Standings</h2>
+      <br>
+      <div class="section-rule"></div>
+    </div>
+    <div class="teams-grid" id="teams-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>MoneyMC</span> &nbsp;·&nbsp; Season 2
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
